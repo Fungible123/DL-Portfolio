@@ -1,0 +1,188 @@
+@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/variables";
+
+// General Styling
+
+$light: #fff;
+$dark: #000;
+$secondary-dark: #021600;
+$green: #12CA04;
+$grey: #C4C4C4;
+
+$primary-font: 'Orbitron', Arial, sans-serif;
+
+body {
+    background-color: $secondary-dark;
+    overflow-x: hidden;
+}
+a {
+    color: $light;
+    font-family: $primary-font;
+    font-weight: 400;
+    &:hover {
+        color: $green;
+    }
+}
+p {
+    color: $green;
+}
+
+h1, h2, h3, h4, h5 {
+    color: $light;
+    font-family: $primary-font;
+    font-weight: 700;
+}
+
+button {
+    background-color: transparent;
+    border: $green 1px solid;
+    border-radius: 10px;
+    padding: 10px 50px;
+    color: $light;
+    font-family: Orbitron;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    align-items: center;
+    transition: background-color .2s ease-in-out;
+    &:hover {
+        background-color: #087300;
+    }
+}
+
+// Navigation Bar Styling
+
+.nav-container {
+    background-color: $dark;
+}
+
+.logo-container {
+    margin: 8px 0px 8px 6px;
+    border-right: #053700 1px solid;
+}
+
+.mylogo {
+    width: 30px;
+    height: 27px;
+    margin: 0px 35px;
+}
+
+.nav {
+    margin: 5px 20px;
+    a {
+        font-family: Orbitron;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 14px;
+        margin: 3px 0px;
+    }
+}
+
+// Main Section Styling
+
+.intro {
+    position: absolute;
+    top: 25%;
+    left: 8.5%;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    .self-intro {
+        h1 {
+            font-weight: bold;
+            font-size: 36px;
+            line-height: 36px;
+            margin: 15px 0px;
+        }
+        span {
+            color: $green;
+        }
+        .sub-intro {
+            font-weight: normal;
+            font-size: 18px;
+            line-height: 18px;
+        }
+    }
+    .read-more {
+        button {
+            margin: 20px 0px;
+        }
+    }
+}
+
+.main-logo {
+    position: absolute;
+    top: 15%;
+    left: 60%;
+    padding: 0px;
+}
+
+// Footer Styling
+
+.footer-container {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 10px 10px;
+    margin: 5px 0px;
+    .social-media-icons {
+        width: 300px;
+        display: flex;
+        justify-content: center;
+        padding: 0px 0px;
+        border-right: #053700 1px solid; 
+        ul {
+            padding: 0px;
+            margin-bottom: 0px;
+            li {
+                list-style-type: none;
+                display: inline;
+                margin: 5px;
+            }
+            a {
+                text-decoration: none;
+                svg {
+                    path {
+                        transition: fill .2s ease-in;
+                        &:hover {
+                            fill: #12CA04;
+                        }
+                    }
+                }
+                svg .linkedin {
+                    width: 20px;
+                    height: 20px;
+                }
+                svg .github {
+                    width: 17px;
+                    height: 17px;
+                }
+                svg .fivehundredpx {
+                    width: 20px;
+                    height: 20px;
+                }
+                svg .flickr {
+                    width: 17px;
+                    height: 17px;
+                }
+            }
+        }
+    }
+    .copyright-info {
+        padding: 0px 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 300px;
+        span {
+            margin: 0px 0px;
+            color: $grey;
+            font-family: Orbitron;
+            font-weight: normal;
+            font-size: 10px;
+            line-height: 7px;
+        }
+    }
+}
