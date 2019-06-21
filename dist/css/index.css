@@ -7021,7 +7021,8 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 body {
-  background-color: #021600; }
+  background-color: #021600;
+  overflow-x: hidden; }
 
 a {
   color: #fff;
@@ -7077,8 +7078,11 @@ button {
     margin: 3px 0px; }
 
 .intro {
-  padding: 60px 18px;
-  margin: 60px 0px; }
+  position: absolute;
+  top: 25%;
+  left: 8.5%;
+  padding: 10px 10px;
+  margin: 10px 0px; }
   .intro .self-intro h1 {
     font-weight: bold;
     font-size: 36px;
@@ -7094,4 +7098,59 @@ button {
     margin: 20px 0px; }
 
 .main-logo {
+  position: absolute;
+  top: 15%;
+  left: 60%;
   padding: 0px; }
+
+.footer-container {
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  padding: 10px 10px;
+  margin: 5px 0px; }
+  .footer-container .social-media-icons {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0px;
+    border-right: #053700 1px solid; }
+    .footer-container .social-media-icons ul {
+      padding: 0px;
+      margin-bottom: 0px; }
+      .footer-container .social-media-icons ul li {
+        list-style-type: none;
+        display: inline;
+        margin: 5px; }
+      .footer-container .social-media-icons ul a {
+        text-decoration: none; }
+        .footer-container .social-media-icons ul a svg path {
+          transition: fill .2s ease-in; }
+          .footer-container .social-media-icons ul a svg path:hover {
+            fill: #12CA04; }
+        .footer-container .social-media-icons ul a svg .linkedin {
+          width: 20px;
+          height: 20px; }
+        .footer-container .social-media-icons ul a svg .github {
+          width: 17px;
+          height: 17px; }
+        .footer-container .social-media-icons ul a svg .fivehundredpx {
+          width: 20px;
+          height: 20px; }
+        .footer-container .social-media-icons ul a svg .flickr {
+          width: 17px;
+          height: 17px; }
+  .footer-container .copyright-info {
+    padding: 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; }
+    .footer-container .copyright-info span {
+      margin: 0px 0px;
+      color: #C4C4C4;
+      font-family: Orbitron;
+      font-weight: normal;
+      font-size: 10px;
+      line-height: 7px; }

@@ -24,7 +24,11 @@ a {
     }
 }
 p {
-    color: $green;
+    color: $light;
+    font-family: $primary-font;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 30px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -33,15 +37,22 @@ h1, h2, h3, h4, h5 {
     font-weight: 700;
 }
 
+span {
+    color: $green;
+}
+
+// Button Styling
+
 button {
+    width: 250px;
     background-color: transparent;
     border: $green 1px solid;
     border-radius: 10px;
     padding: 10px 50px;
     color: $light;
-    font-family: Orbitron;
+    font-family: $primary-font;
     font-style: normal;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 18px;
     line-height: 18px;
     align-items: center;
@@ -71,16 +82,16 @@ button {
 .nav {
     margin: 5px 20px;
     a {
-        font-family: Orbitron;
+        font-family: $primary-font;
         font-style: normal;
-        font-weight: normal;
+        font-weight: 400;
         font-size: 14px;
         line-height: 14px;
         margin: 3px 0px;
     }
 }
 
-// Main Section Styling
+// Main Section Styling - HOME
 
 .intro {
     position: absolute;
@@ -94,9 +105,6 @@ button {
             font-size: 36px;
             line-height: 36px;
             margin: 15px 0px;
-        }
-        span {
-            color: $green;
         }
         .sub-intro {
             font-weight: normal;
@@ -117,6 +125,10 @@ button {
     left: 60%;
     padding: 0px;
 }
+
+// Main Section Styling - ABOUT
+
+
 
 // Footer Styling
 
@@ -179,10 +191,11 @@ button {
         span {
             margin: 0px 0px;
             color: $grey;
-            font-family: Orbitron;
+            font-family: $primary-font;
             font-weight: normal;
             font-size: 10px;
             line-height: 7px;
         }
     }
 }
+

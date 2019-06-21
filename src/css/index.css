@@ -7032,22 +7032,30 @@ a {
     color: #12CA04; }
 
 p {
-  color: #12CA04; }
+  color: #fff;
+  font-family: "Orbitron", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px; }
 
 h1, h2, h3, h4, h5 {
   color: #fff;
   font-family: "Orbitron", Arial, sans-serif;
   font-weight: 700; }
 
+span {
+  color: #12CA04; }
+
 button {
+  width: 250px;
   background-color: transparent;
   border: #12CA04 1px solid;
   border-radius: 10px;
   padding: 10px 50px;
   color: #fff;
-  font-family: Orbitron;
+  font-family: "Orbitron", Arial, sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   align-items: center;
@@ -7070,9 +7078,9 @@ button {
 .nav {
   margin: 5px 20px; }
   .nav a {
-    font-family: Orbitron;
+    font-family: "Orbitron", Arial, sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 14px;
     line-height: 14px;
     margin: 3px 0px; }
@@ -7088,8 +7096,6 @@ button {
     font-size: 36px;
     line-height: 36px;
     margin: 15px 0px; }
-  .intro .self-intro span {
-    color: #12CA04; }
   .intro .self-intro .sub-intro {
     font-weight: normal;
     font-size: 18px;
@@ -7150,7 +7156,7 @@ button {
     .footer-container .copyright-info span {
       margin: 0px 0px;
       color: #C4C4C4;
-      font-family: Orbitron;
+      font-family: "Orbitron", Arial, sans-serif;
       font-weight: normal;
       font-size: 10px;
       line-height: 7px; }
