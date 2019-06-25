@@ -7020,6 +7020,10 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+html {
+  position: relative;
+  min-height: 100%; }
+
 body {
   background-color: #021600;
   overflow-x: hidden; }
@@ -7032,22 +7036,30 @@ a {
     color: #12CA04; }
 
 p {
-  color: #12CA04; }
+  color: #fff;
+  font-family: "Orbitron", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 30px; }
 
 h1, h2, h3, h4, h5 {
   color: #fff;
   font-family: "Orbitron", Arial, sans-serif;
   font-weight: 700; }
 
+span {
+  color: #12CA04; }
+
 button {
+  width: 250px;
   background-color: transparent;
   border: #12CA04 1px solid;
   border-radius: 10px;
   padding: 10px 50px;
   color: #fff;
-  font-family: Orbitron;
+  font-family: "Orbitron", Arial, sans-serif;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 18px;
   line-height: 18px;
   align-items: center;
@@ -7070,9 +7082,9 @@ button {
 .nav {
   margin: 5px 20px; }
   .nav a {
-    font-family: Orbitron;
+    font-family: "Orbitron", Arial, sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     font-size: 14px;
     line-height: 14px;
     margin: 3px 0px; }
@@ -7088,8 +7100,6 @@ button {
     font-size: 36px;
     line-height: 36px;
     margin: 15px 0px; }
-  .intro .self-intro span {
-    color: #12CA04; }
   .intro .self-intro .sub-intro {
     font-weight: normal;
     font-size: 18px;
@@ -7102,6 +7112,58 @@ button {
   top: 15%;
   left: 60%;
   padding: 0px; }
+
+#about-section-container {
+  padding: 40px 15px;
+  margin: 40px auto; }
+  #about-section-container .description {
+    padding-right: 40px; }
+  #about-section-container .skills-section {
+    padding-left: 40px; }
+
+.sub-container {
+  display: flex;
+  justify-content: center; }
+
+.individual-projects {
+  border: none;
+  background-color: transparent; }
+  @media (min-width: 992px) {
+    .individual-projects {
+      margin: 0px; } }
+  .individual-projects .image-container {
+    display: flex;
+    align-items: center; }
+    .individual-projects .image-container img {
+      width: 100%;
+      height: 150px;
+      border: 10px solid #FFFFFF;
+      border-radius: 10px; }
+  .individual-projects .content-container h5 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    color: #12CA04; }
+  .individual-projects .content-container p {
+    font-size: 14px;
+    line-height: 18px; }
+  .individual-projects .content-container ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 0px; }
+    .individual-projects .content-container ul li {
+      margin-right: 10px;
+      padding: 5px;
+      background-color: #333333;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 14px;
+      border-radius: 5px; }
+      .individual-projects .content-container ul li a {
+        color: #666666;
+        text-decoration: none; }
 
 .footer-container {
   position: absolute;
@@ -7150,7 +7212,7 @@ button {
     .footer-container .copyright-info span {
       margin: 0px 0px;
       color: #C4C4C4;
-      font-family: Orbitron;
+      font-family: "Orbitron", Arial, sans-serif;
       font-weight: normal;
       font-size: 10px;
       line-height: 7px; }
