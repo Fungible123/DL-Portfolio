@@ -7020,6 +7020,10 @@ a.text-dark:hover, a.text-dark:focus {
     color: inherit;
     border-color: #dee2e6; } }
 
+html {
+  position: relative;
+  min-height: 100%; }
+
 body {
   background-color: #021600;
   overflow-x: hidden; }
@@ -7108,6 +7112,58 @@ button {
   top: 15%;
   left: 60%;
   padding: 0px; }
+
+#about-section-container {
+  padding: 40px 15px;
+  margin: 40px auto; }
+  #about-section-container .description {
+    padding-right: 40px; }
+  #about-section-container .skills-section {
+    padding-left: 40px; }
+
+.sub-container {
+  display: flex;
+  justify-content: center; }
+
+.individual-projects {
+  border: none;
+  background-color: transparent; }
+  @media (min-width: 992px) {
+    .individual-projects {
+      margin: 0px; } }
+  .individual-projects .image-container {
+    display: flex;
+    align-items: center; }
+    .individual-projects .image-container img {
+      width: 100%;
+      height: 150px;
+      border: 10px solid #FFFFFF;
+      border-radius: 10px; }
+  .individual-projects .content-container h5 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 18px;
+    color: #12CA04; }
+  .individual-projects .content-container p {
+    font-size: 14px;
+    line-height: 18px; }
+  .individual-projects .content-container ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding-left: 0px; }
+    .individual-projects .content-container ul li {
+      margin-right: 10px;
+      padding: 5px;
+      background-color: #333333;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 14px;
+      border-radius: 5px; }
+      .individual-projects .content-container ul li a {
+        color: #666666;
+        text-decoration: none; }
 
 .footer-container {
   position: absolute;
