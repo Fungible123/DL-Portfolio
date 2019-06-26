@@ -84,7 +84,10 @@ button {
 }
 
 .nav {
-    margin: 5px 20px;
+    margin: 5px 10px;
+    @include media-breakpoint-down(sm) {
+        margin: 5px 5px;
+    }
     a {
         font-family: $primary-font;
         font-style: normal;
@@ -92,6 +95,65 @@ button {
         font-size: 14px;
         line-height: 14px;
         margin: 3px 0px;
+        text-align: center;
+        @include media-breakpoint-down(sm) {
+            padding: 8px 10px;
+        }
+    }
+}
+
+.tag-effect a::before,
+.tag-effect a::after {
+	display: inline-block;
+	opacity: 0;
+	transition: transform 0.3s, opacity 0.2s;
+}
+
+.tag-effect a::before {
+	margin-right: 1px;
+	content: '<';
+	transform: translateX(5px);
+}
+
+.tag-effect a::after {
+	margin-left: 1px;
+	content: '>';
+	transform: translateX(-5px);
+}
+
+.tag-effect a:hover::before,
+.tag-effect a:hover::after,
+.tag-effect a:focus::before,
+.tag-effect a:focus::after {
+	opacity: 1;
+	transform: translateX(0px);
+}
+
+.mobile-nav {
+    @include media-breakpoint-down(xs) {
+        visibility: hidden;
+        opacity: 0;
+        transition: all .3s;
+        transform: translateX(30px);
+        &.open {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(10px);
+        }
+    }
+}
+
+.mobile-menu {
+    margin: 10px;
+    @include media-breakpoint-up(sm) {
+        display: none;
+    }
+    .arrow-image {
+        transition: .3s linear;
+        &.open {
+            transform: scaleX(-1);
+            filter: FlipH;
+        }
     }
 }
 
@@ -137,13 +199,36 @@ button {
     margin: 40px auto;
     .description {
         padding-right: 40px;
+        @include media-breakpoint-down(lg) {
+            padding-right: 0px;
+            padding-left: 0px;
+            margin-bottom: 80px;
+        }
+        @include media-breakpoint-down(md) { 
+            margin: 0px 20px 80px 20px;
+        }
     }
     .skills-section {
         padding-left: 40px;
+        @include media-breakpoint-down(xl) {
+            
+        }
+        @include media-breakpoint-down(lg) {
+            padding-left: 0px;
+        }
+        @include media-breakpoint-down(md) { 
+            margin: 0px 20px;
+        }
     }
 }
 
 // Main Section Styling - PROJECTS
+
+#projects-section-container {
+    @include media-breakpoint-down(md) {
+        margin-bottom: 40px;
+    }
+}
 
 .sub-container {
     display: flex;
@@ -161,7 +246,7 @@ button {
         img {
             width: 100%;
             height: 150px;
-            border: 10px solid #FFFFFF;
+            border: 5px solid #FFFFFF;
             border-radius: 10px;
         }
     }
@@ -182,18 +267,23 @@ button {
             flex-direction: row;
             list-style-type: none;
             padding-left: 0px;
+            a {
+                color: #666666;
+                text-decoration: none;
+                transition: .5s;
+                &:hover {
+                    color: $green;
+                    text-shadow: 0 0 5px $green;
+                }
+            }
             li {
                 margin-right: 10px;
                 padding: 5px;
-                background-color: #333333;
+                background-color: #043600;
                 font-weight: normal;
                 font-size: 14px;
                 line-height: 14px;
                 border-radius: 5px;
-                a {
-                    color: #666666;
-                    text-decoration: none;
-                }
             }
         }
     }
@@ -201,7 +291,70 @@ button {
 
 // Main Section Styling - CONTACT
 
+.heading-container {
+    display: flex;
+    justify-content: center;
+}
 
+form {
+    .form-left, .form-right {
+        label {
+            color: $light;
+            font-family: $primary-font;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 14px;
+        }
+        .form-control {
+            background-color: transparent;
+            border: none;
+            border-bottom: $green 1px solid;
+            color: $light;
+            font-family: $primary-font;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 14px;
+            margin-bottom: 30px;
+            &::placeholder {
+                color: $light;
+                font-family: $primary-font;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 14px;
+            }
+            &:focus {
+                color: $light;
+                background-color: transparent;
+                border-color: $green;
+                outline: 0;
+                box-shadow: 0 0 0 0.2rem $green;
+            }
+            option {
+                color: $dark;
+                font-family: $primary-font;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 14px;
+                &:hover {
+                    background: $green;
+                }
+            }
+        }
+        .design-option {
+            margin: 0px 20px 35px 0px;
+            @include media-breakpoint-down(lg) {
+                margin: 0px 10px 35px 0px;
+            }
+            @include media-breakpoint-down(sm) {
+                margin: 0px 10px 35px 0px;
+            }
+        }
+        .submit-contact {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
 
 // Footer Styling
 
@@ -212,8 +365,14 @@ button {
     width: 100%;
     padding: 10px 10px;
     margin: 5px 0px;
+    display: flex;
+    justify-content: flex-end;
+    @include media-breakpoint-down(sm) { 
+        display: flex;
+        justify-content: center;
+    }
     .social-media-icons {
-        width: 300px;
+        width: 200px;
         display: flex;
         justify-content: center;
         padding: 0px 0px;
@@ -260,7 +419,7 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 300px;
+        width: 200px;
         span {
             margin: 0px 0px;
             color: $grey;

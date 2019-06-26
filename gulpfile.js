@@ -33,7 +33,7 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('dist'));
 });
 
-// Process javascript into babel
+Process javascript into babel
 gulp.task('processJs', function() {
     return gulp.src('src/js/*.js')
     .pipe(babel({
