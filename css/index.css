@@ -7095,16 +7095,8 @@ button {
     @media (max-width: 767.98px) {
       .nav a {
         padding: 8px 10px; } }
-  @media (max-width: 767.98px) {
-    .nav .mobile-nav {
-      visibility: hidden;
-      opacity: 0;
-      transition: all .3s;
-      transform: translateX(30px); }
-      .nav .mobile-nav.open {
-        visibility: visible;
-        opacity: 1;
-        transform: translateX(10px); } }
+    .nav a.active {
+      color: #12CA04; }
 
 .tag-effect a::before,
 .tag-effect a::after {
@@ -7128,6 +7120,17 @@ button {
 .tag-effect a:focus::after {
   opacity: 1;
   transform: translateX(0px); }
+
+@media (max-width: 575.98px) {
+  .mobile-nav {
+    visibility: hidden;
+    opacity: 0;
+    transition: all .3s;
+    transform: translateX(30px); }
+    .mobile-nav.open {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(10px); } }
 
 .mobile-menu {
   margin: 10px; }
