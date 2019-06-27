@@ -2,8 +2,6 @@ var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass        = require('gulp-sass');
 var babel       = require('gulp-babel');
-var uglify      = require('gulp-uglify');
-var rename      = require('gulp-rename');
 
 // Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
@@ -33,11 +31,11 @@ gulp.task('copy', function() {
     .pipe(gulp.dest('dist'));
 });
 
-Process javascript into babel
+// Process javascript into babel
 gulp.task('processJs', function() {
     return gulp.src('src/js/*.js')
     .pipe(babel({
-        presets: ['env']
+        presets: ['@babel/preset-env']
     }))
     .pipe(gulp.dest('dist/js'));
 });

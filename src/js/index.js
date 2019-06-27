@@ -12,4 +12,3 @@ const flipMenu = function () {
 }
 flipMenu();
 
-

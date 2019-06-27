@@ -99,6 +99,9 @@ button {
         @include media-breakpoint-down(sm) {
             padding: 8px 10px;
         }
+        &.active {
+            color: $green;
+        }
     }
 }
 
@@ -124,7 +127,7 @@ button {
 .tag-effect a:hover::before,
 .tag-effect a:hover::after,
 .tag-effect a:focus::before,
-.tag-effect a:focus::after {
+.tag-effect a:focus::after, {
 	opacity: 1;
 	transform: translateX(0px);
 }
@@ -176,6 +179,9 @@ button {
             font-weight: normal;
             font-size: 18px;
             line-height: 18px;
+            @include media-breakpoint-down(sm) {
+                max-width: 400px;
+            }
         }
     }
     .read-more {
@@ -187,9 +193,99 @@ button {
 
 .main-logo {
     position: absolute;
-    top: 15%;
-    left: 60%;
+    top: 100px;
+    left: 750px;
     padding: 0px;
+    @include media-breakpoint-down(lg) {
+        position: absolute;
+        top: 150px;
+        left: 700px;
+    }
+    @include media-breakpoint-down(md) {
+        position: absolute;
+        top: 150px;
+        left: 640px;
+    }
+    @include media-breakpoint-down(sm) {
+        position: absolute;
+        top: 60px;
+        left: 180px;
+    }
+}
+
+#logo1 {
+    animation: fill-white .8s ease forwards 3s;
+    @include media-breakpoint-down(lg) {
+        width: 250px;
+        height: 300px;
+    }
+    @include media-breakpoint-down(md) {
+        width: 200px;
+        height: 250px;
+    }
+    @include media-breakpoint-down(sm) {
+        width: 80px;
+        height: 100px;
+    }
+}
+
+#logo1 path {
+    stroke-dasharray: 2854;
+    stroke-dashoffset: 2854;
+    animation: line-animate 10s ease forwards;
+}
+
+#logo2 {
+    position: absolute;
+    left: 339px;
+    animation: fill-green .8s ease forwards 3s;
+    @include media-breakpoint-down(lg) {
+        position: absolute;
+        width: 250px;
+        height: 300px;
+        left: 170px;
+    }
+    @include media-breakpoint-down(md) {
+        position: absolute;
+        width: 200px;
+        height: 250px;
+        left: 142px;
+    }
+    @include media-breakpoint-down(sm) {
+        width: 80px;
+        height: 100px;
+        left: 11.3%;
+    }
+}
+
+#logo2 path {
+    stroke-dasharray: 5263;
+    stroke-dashoffset: 5263;
+    animation: line-animate 10s ease forwards;
+}
+
+@keyframes line-animate {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill-green {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: $green;
+    }
+}
+
+@keyframes fill-white {
+    from {
+        fill: transparent;
+    }
+    to {
+        fill: $light;
+    }
 }
 
 // Main Section Styling - ABOUT
