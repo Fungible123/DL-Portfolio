@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Fungible123/DL-Portfolio#readme",
   "dependencies": {
+    "animate.css": "^3.7.2",
     "bootstrap": "^4.3.1",
     "gulp-cli": "^2.2.0",
     "jquery": "^3.4.1",

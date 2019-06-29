@@ -11,6 +11,12 @@ gulp.task('sass', function() {
         .pipe(browserSync.stream());
 });
 
+// Get animate.css and copy to css folder
+gulp.task('animate', function() {
+    return gulp.src(['node_modules/animate.css/animate.min.css'])
+        .pipe(gulp.dest("src/css"))
+});
+
 // Move the javascript files into our /src/js folder
 gulp.task('js', function() {
     return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js', 'node_modules/jquery/dist/jquery.min.js', 'node_modules/popper.js/dist/umd/popper.min.js'])
@@ -26,6 +32,7 @@ gulp.task('copy', function() {
         'src/**/*.png',
         'src/**/*.svg',
         'src/**/*.css',
+        'src/**/*.*.css',
         'src/**/**/*.**.js'
     ])
     .pipe(gulp.dest('dist'));
@@ -51,4 +58,4 @@ gulp.task('serve', gulp.series('sass', function() {
     gulp.watch(['src/*.html', 'src/*.js']).on('change', browserSync.reload);
 }));
 
-gulp.task('default', gulp.parallel('js', 'serve', 'copy', 'processJs'));
+gulp.task('default', gulp.parallel('js', 'serve', 'copy', 'processJs', 'animate'));

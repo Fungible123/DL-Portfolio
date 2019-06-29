@@ -11,4 +11,3 @@ const flipMenu = function () {
     });
 }
 flipMenu();
-
