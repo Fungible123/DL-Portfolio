@@ -7027,6 +7027,16 @@ html {
 body {
   background-color: #021600;
   overflow-x: hidden; }
+  body::after {
+    content: "";
+    background: url(../images/green.jpg) no-repeat center center/cover;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1; }
 
 a {
   color: #fff;
@@ -7158,14 +7168,95 @@ button {
     font-weight: normal;
     font-size: 18px;
     line-height: 18px; }
+    @media (max-width: 767.98px) {
+      .intro .self-intro .sub-intro {
+        max-width: 400px; } }
   .intro .read-more button {
     margin: 20px 0px; }
 
 .main-logo {
   position: absolute;
-  top: 15%;
-  left: 60%;
+  top: 100px;
+  left: 750px;
   padding: 0px; }
+  @media (max-width: 1199.98px) {
+    .main-logo {
+      position: absolute;
+      top: 150px;
+      left: 700px; } }
+  @media (max-width: 991.98px) {
+    .main-logo {
+      position: absolute;
+      top: 150px;
+      left: 640px; } }
+  @media (max-width: 767.98px) {
+    .main-logo {
+      position: absolute;
+      top: 60px;
+      left: 180px; } }
+
+#logo1 {
+  animation: fill-white .6s ease forwards 2s; }
+  @media (max-width: 1199.98px) {
+    #logo1 {
+      width: 250px;
+      height: 300px; } }
+  @media (max-width: 991.98px) {
+    #logo1 {
+      width: 200px;
+      height: 250px; } }
+  @media (max-width: 767.98px) {
+    #logo1 {
+      width: 80px;
+      height: 100px; } }
+
+#logo1 path {
+  stroke-dasharray: 2854;
+  stroke-dashoffset: 2854;
+  animation: line-animate 6s ease forwards; }
+
+#logo2 {
+  position: absolute;
+  left: 339px;
+  animation: fill-green .6s ease forwards 2s; }
+  @media (max-width: 1199.98px) {
+    #logo2 {
+      position: absolute;
+      width: 250px;
+      height: 300px;
+      left: 170px; } }
+  @media (max-width: 991.98px) {
+    #logo2 {
+      position: absolute;
+      width: 200px;
+      height: 250px;
+      left: 142px; } }
+  @media (max-width: 767.98px) {
+    #logo2 {
+      width: 80px;
+      height: 100px;
+      left: 11.3%; } }
+
+#logo2 path {
+  stroke-dasharray: 5263;
+  stroke-dashoffset: 5263;
+  animation: line-animate 6s ease forwards; }
+
+@keyframes line-animate {
+  to {
+    stroke-dashoffset: 0; } }
+
+@keyframes fill-green {
+  from {
+    fill: transparent; }
+  to {
+    fill: #12CA04; } }
+
+@keyframes fill-white {
+  from {
+    fill: transparent; }
+  to {
+    fill: #fff; } }
 
 #about-section-container {
   padding: 40px 15px;
