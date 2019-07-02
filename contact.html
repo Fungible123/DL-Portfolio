@@ -57,14 +57,14 @@
                   <h5>Need a website? Send in a message so we could get started.</h5>
               </div>
           </div>
-        
-          <form class="row" action="">
+
+          <form class="row" action="POST" data-netlify="true">
             <div class="form-left col-lg-6 mr-0">
                 <input name="name" type="text" class="form-control" placeholder="First Name, Last Name" autocomplete="off">
                 <input name="email" type="text" class="form-control" placeholder="Email Address" autocomplete="off">
                 <input name="name" type="text" class="form-control" placeholder="Company / Organization" autocomplete="off">
                 <label>You need a..</label>
-                <select class="form-control">
+                <select name="role[]" class="form-control">
                     <option value="" selected>-- Select a project --</option>
                     <option value="Landing Page">Landing Page</option>
                     <option value="Email Template">Email Template</option>
@@ -75,7 +75,7 @@
                     <option value="Other">Other</option>
                 </select>
                 <label>Budget</label>
-                <select class="form-control">
+                <select name="role[]" class="form-control">
                     <option value="" selected>-- Select a budget --</option>
                     <option value="$1000">$1000</option>
                     <option value="$1500">$1500</option>
@@ -87,7 +87,7 @@
 
             <div class="form-right col-lg-6">
               <label>Deadline</label>
-              <select class="form-control">
+              <select name="role[]" class="form-control">
                   <option value="" selected>-- Select a deadline --</option>
                   <option value="2 weeks">2 weeks</option>
                   <option value="3 weeks">3 weeks</option>
@@ -110,10 +110,11 @@
               </div>
               <div class="form-group">
                 <label>Project Details</label>
-                <textarea type="" class="form-control" rows="5"></textarea>
+                <textarea name="message" class="form-control" rows="5"></textarea>
               </div>
+              <div data-netlify-recaptcha="true"></div>
               <div class="submit-contact mt-5 mb-5">
-                <button type="submit"">Send</button>
+                <button type="submit">Send</button>
               </div>                 
             </div>
           </form>

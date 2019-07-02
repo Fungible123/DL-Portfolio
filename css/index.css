@@ -7267,6 +7267,10 @@ button {
 #about-section-container {
   padding: 0px 10px;
   margin-bottom: 60px; }
+  @media (min-width: 992px) {
+    #about-section-container {
+      margin-top: 50px;
+      padding: 0px 0px; } }
   #about-section-container .description {
     padding-right: 40px; }
     @media (max-width: 1199.98px) {
