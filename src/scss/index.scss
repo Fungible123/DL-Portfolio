@@ -317,6 +317,10 @@ button {
 #about-section-container {
     padding: 0px 10px;
     margin-bottom: 60px;
+    @include media-breakpoint-up(lg) {
+        margin-top: 50px;
+        padding: 0px 0px;
+    }
     .description {
         padding-right: 40px;
         @include media-breakpoint-down(lg) {
