@@ -7211,7 +7211,7 @@ button {
       justify-content: center; } }
   @media (min-width: 992px) {
     .intro {
-      margin: 50px 0px 0px 0px;
+      margin: 70px 0px 0px 0px;
       display: flex;
       flex-direction: column;
       justify-items: center;
@@ -7226,7 +7226,7 @@ button {
       flex-direction: row;
       justify-items: center;
       align-items: center;
-      margin: 0px 0px 0px 0px;
+      margin: 50px 0px 0px 0px;
       padding: 0px 0px 0px 60px; } }
 
 #logo1 {
