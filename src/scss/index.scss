@@ -7,9 +7,11 @@ $light: #fff;
 $dark: #000;
 $secondary-dark: #021600;
 $green: #12CA04;
+$darker-green: #087300;
 $grey: #C4C4C4;
 
 $primary-font: 'Orbitron', Arial, sans-serif;
+$secondary-font: 'Maven Pro', Arial, sans-serif;
 
 html {
     position: relative; min-height: 100%;
@@ -40,16 +42,18 @@ a {
 }
 p {
     color: $light;
-    font-family: $primary-font;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 30px;
+    font-family: $secondary-font;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    letter-spacing: 1px;
 }
 
 h1, h2, h3, h4, h5 {
     color: $light;
-    font-family: $primary-font;
+    font-family: $secondary-font;
     font-weight: 700;
+    letter-spacing: 1px;
 }
 
 span {
@@ -73,7 +77,7 @@ button {
     align-items: center;
     transition: background-color .2s ease-in-out;
     &:hover {
-        background-color: #087300;
+        background-color: $darker-green;
     }
 }
 
@@ -205,20 +209,23 @@ button {
 }
 
 .intro {
-    margin: 20px 0px 40px 0px;
+    margin: 40px 0px 40px 0px;
     .self-intro {
         h1 {
+            font-family: $primary-font;
             font-size: 2em;
         }
         .sub-intro {
-            font-size: 1em;
+            font-size: 1.2em;
+            font-weight: normal;
+            color: $grey;
         }
         @include media-breakpoint-up(md) {
             h1 {
-                font-size: 2.5em;
+                font-size: 3em;
             }
             .sub-intro {
-                font-size: 1.5em;
+                font-size: 1.2em;
             }
         }
     }
@@ -226,7 +233,7 @@ button {
         margin: 30px 0px;
     }
     @include media-breakpoint-up(md) {
-        margin: 0px 0px 0px 0px;
+        margin: 40px 0px 40px 0px;
         display: flex;
         flex-direction: column;
         justify-items: center;
@@ -317,6 +324,10 @@ button {
 #about-section-container {
     padding: 0px 10px;
     margin-bottom: 60px;
+    @include media-breakpoint-up(md) {
+        margin-top: 50px;
+        padding: 0px 10px;
+    }
     @include media-breakpoint-up(lg) {
         margin-top: 50px;
         padding: 0px 0px;
@@ -331,6 +342,12 @@ button {
         @include media-breakpoint-down(md) { 
             margin: 0px 20px 80px 20px;
         }
+        p {
+            text-align: justify;
+        }
+        h1 {
+            font-family: $primary-font;
+        }
     }
     .skills-section {
         padding-left: 40px;
@@ -343,79 +360,127 @@ button {
         @include media-breakpoint-down(md) { 
             margin: 0px 20px;
         }
+        h1 {
+            font-family: $primary-font;
+        }
     }
 }
 
 // Main Section Styling - PROJECTS
 
 #projects-section-container {
-    padding: 0px 10px;
-    @include media-breakpoint-up(md) {
-        margin-bottom: 10px;
-    }
-    @include media-breakpoint-up(lg) {
-        margin-bottom: 0px;
-        margin-top: 20px;
-        padding: 0px 0px;
-    }
-}
-
-.sub-container {
-    display: flex;
-    justify-content: center;
-    padding-top: 30px;
-}
-.individual-projects {
-    border: none;
-    background-color: transparent;
-    @include media-breakpoint-up(lg) { 
-        margin: 0px;
-    }
-    .image-container {
-        display: flex;
-        align-items: center;
-        img {
-            width: 100%;
-            height: 150px;
-            border: 5px solid #FFFFFF;
-            border-radius: 10px;
-        }
-    }
-    .content-container {
-        h5 {
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 18px;
-            color: $green;
-        }
-        p {
-            font-size: 14px;
-            line-height: 18px;
-        }
+    margin-top: 50px;
+    .individual-projects {
+        position: relative;
+        background: none;
+        padding: 0px;
+        border: none;
+        margin: 40px auto;
         ul {
+            list-style-type: none;
+            padding: 0px;
+            position: absolute;
+            top: 0;
+            left: 0;
             display: flex;
             flex-direction: row;
-            list-style-type: none;
-            padding-left: 0px;
-            a {
-                color: #666666;
-                text-decoration: none;
-                transition: .5s;
+            justify-content: center;
+            width: 100%;
+            z-index: 2;
+            opacity: 0;
+            transition: all .2s ease-in-out;
+            li {
+                margin: 0px 30px 0px 0px;
+                padding: 2px 5px;
+                border-radius: 5px;
+                border: $green 1px solid;
+                transition: .2s ease-in-out;
+                &:nth-child(2) {
+                    margin: 0px 0px 0px 0px;
+                }
                 &:hover {
-                    color: $green;
-                    text-shadow: 0 0 5px $green;
+                    cursor: pointer;
+                    background-color: $darker-green;
                 }
             }
-            li {
-                margin-right: 10px;
-                padding: 5px;
-                background-color: #043600;
-                font-weight: normal;
-                font-size: 14px;
-                line-height: 14px;
-                border-radius: 5px;
+            li a {
+                text-decoration: none;
+                color: $light;
             }
+        }
+        .landingpage-container {
+            background: url(../images/landingpage.jpg) no-repeat center center/cover;
+            width: 261px;
+            height: 175px;
+            max-width: 100%;
+            opacity: 1;
+            transition: opacity .2s ease-out;
+        }
+        .photography-container {
+            background: url(../images/photography.jpg) no-repeat center center/cover;
+            width: 261px;
+            height: 175px;
+            max-width: 100%;
+            opacity: 1;
+            transition: opacity .2s ease-out;
+        }
+        .emailtemplate-container {
+            background: url(../images/emailtemplate.jpg) no-repeat center center/cover;
+            width: 261px;
+            height: 175px;
+            max-width: 100%;
+            opacity: 1;
+            transition: opacity .2s ease-out;
+        }
+        .blog-container {
+            background: url(../images/blog.jpg) no-repeat center center/cover;
+            width: 261px;
+            height: 175px;
+            max-width: 100%;
+            opacity: 1;
+            transition: opacity .2s ease-out;
+        }
+        .content-container {
+            width: 261px;
+            text-align: center;
+            h5 {
+                font-family: $primary-font;
+                font-weight: normal;
+                color: $green;
+            }
+        }
+        &:hover ul {
+            position: absolute;
+            top: 80px;
+            opacity: 1;
+        }
+        &:hover .landingpage-container {
+            opacity: .2;
+        }
+        &:hover .emailtemplate-container {
+            opacity: .2;
+        }
+        &:hover .photography-container {
+            opacity: .2;
+        }
+        &:hover .blog-container {
+            opacity: .2;
+        }
+        @include media-breakpoint-up(sm) {
+            margin: 30px auto;
+        }
+        @include media-breakpoint-up(md) {
+            margin: 30px auto;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-right: 30px;
+            margin-bottom: 0px;
+            margin-left: 0px;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-right: 15px;
+            margin-bottom: 0px;
+            margin-left: 0px;
         }
     }
 }
@@ -431,8 +496,8 @@ form {
     .form-left, .form-right {
         label {
             color: $light;
-            font-family: $primary-font;
-            font-weight: 700;
+            font-family: $secondary-font;
+            font-weight: 500;
             font-size: 14px;
             line-height: 14px;
         }
@@ -440,15 +505,15 @@ form {
             background-color: transparent;
             border: none;
             border-bottom: $green 1px solid;
-            color: $light;
-            font-family: $primary-font;
+            color: $grey;
+            font-family: $secondary-font;
             font-weight: 400;
             font-size: 14px;
             line-height: 14px;
             margin-bottom: 30px;
             &::placeholder {
                 color: $light;
-                font-family: $primary-font;
+                font-family: $secondary-font;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 14px;
@@ -462,7 +527,7 @@ form {
             }
             option {
                 color: $dark;
-                font-family: $primary-font;
+                font-family: $secondary-font;
                 font-weight: 400;
                 font-size: 14px;
                 line-height: 14px;
@@ -496,7 +561,7 @@ form {
     width: 100%;
     height: 50px;
     padding: 10px 10px;
-    margin: 5px 0px;
+    margin: 50px 0px 10px 0px;
     display: flex;
     justify-content: flex-end;
     @include media-breakpoint-down(sm) { 
