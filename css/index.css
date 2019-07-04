@@ -7047,15 +7047,17 @@ a {
 
 p {
   color: #fff;
-  font-family: "Orbitron", Arial, sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 30px; }
+  font-family: "Maven Pro", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 25px;
+  letter-spacing: 1px; }
 
 h1, h2, h3, h4, h5 {
   color: #fff;
-  font-family: "Orbitron", Arial, sans-serif;
-  font-weight: 700; }
+  font-family: "Maven Pro", Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 1px; }
 
 span {
   color: #12CA04; }
@@ -7189,12 +7191,13 @@ button {
   .intro .self-intro h1 {
     font-size: 2em; }
   .intro .self-intro .sub-intro {
-    font-size: 1em; }
+    font-size: 1.2em;
+    color: #C4C4C4; }
   @media (min-width: 768px) {
     .intro .self-intro h1 {
-      font-size: 2.5em; }
+      font-size: 3em; }
     .intro .self-intro .sub-intro {
-      font-size: 1.5em; } }
+      font-size: 1.2em; } }
   .intro .read-more {
     margin: 30px 0px; }
   @media (min-width: 768px) {
@@ -7281,6 +7284,8 @@ button {
     @media (max-width: 991.98px) {
       #about-section-container .description {
         margin: 0px 20px 80px 20px; } }
+    #about-section-container .description p {
+      text-align: justify; }
   #about-section-container .skills-section {
     padding-left: 40px; }
     @media (max-width: 1199.98px) {
@@ -7290,65 +7295,45 @@ button {
       #about-section-container .skills-section {
         margin: 0px 20px; } }
 
-#projects-section-container {
-  padding: 0px 10px; }
-  @media (min-width: 768px) {
-    #projects-section-container {
-      margin-bottom: 10px; } }
-  @media (min-width: 992px) {
-    #projects-section-container {
-      margin-bottom: 0px;
-      margin-top: 20px;
-      padding: 0px 0px; } }
-
-.sub-container {
-  display: flex;
-  justify-content: center;
-  padding-top: 30px; }
-
 .individual-projects {
-  border: none;
-  background-color: transparent; }
-  @media (min-width: 992px) {
-    .individual-projects {
-      margin: 0px; } }
-  .individual-projects .image-container {
-    display: flex;
-    align-items: center; }
-    .individual-projects .image-container img {
-      width: 100%;
-      height: 150px;
-      border: 5px solid #FFFFFF;
-      border-radius: 10px; }
-  .individual-projects .content-container h5 {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 18px;
-    color: #12CA04; }
-  .individual-projects .content-container p {
-    font-size: 14px;
-    line-height: 18px; }
-  .individual-projects .content-container ul {
+  position: relative;
+  background: none;
+  padding: 0px;
+  border: none; }
+  .individual-projects ul {
+    list-style-type: none;
+    padding: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: row;
-    list-style-type: none;
-    padding-left: 0px; }
-    .individual-projects .content-container ul a {
-      color: #666666;
-      text-decoration: none;
-      transition: .5s; }
-      .individual-projects .content-container ul a:hover {
-        color: #12CA04;
-        text-shadow: 0 0 5px #12CA04; }
-    .individual-projects .content-container ul li {
-      margin-right: 10px;
-      padding: 5px;
-      background-color: #043600;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 14px;
-      border-radius: 5px; }
+    z-index: 2;
+    text-align: center;
+    width: 100%; }
+    .individual-projects ul li {
+      margin: 0px 30px 0px 0px; }
+    .individual-projects ul li a {
+      text-decoration: none; }
+  .individual-projects .landingpage-container {
+    background: url(../images/landingpage.jpg) no-repeat center center/cover;
+    width: 261px;
+    height: 175px;
+    margin: 0px 0px 0px 0px; }
+  .individual-projects .photography-container {
+    background: url(../images/photography.jpg) no-repeat center center/cover;
+    width: 261px;
+    height: 175px; }
+  .individual-projects .emailtemplate-container {
+    background: url(../images/emailtemplate.jpg) no-repeat center center/cover;
+    width: 261px;
+    height: 175px; }
+  .individual-projects .blog-container {
+    background: url(../images/blog.jpg) no-repeat center center/cover;
+    width: 261px;
+    height: 175px; }
+  .individual-projects .content-container {
+    width: 261px; }
 
 .heading-container {
   display: flex;
@@ -7356,8 +7341,8 @@ button {
 
 form .form-left label, form .form-right label {
   color: #fff;
-  font-family: "Orbitron", Arial, sans-serif;
-  font-weight: 700;
+  font-family: "Maven Pro", Arial, sans-serif;
+  font-weight: 500;
   font-size: 14px;
   line-height: 14px; }
 
@@ -7365,15 +7350,15 @@ form .form-left .form-control, form .form-right .form-control {
   background-color: transparent;
   border: none;
   border-bottom: #12CA04 1px solid;
-  color: #fff;
-  font-family: "Orbitron", Arial, sans-serif;
+  color: #C4C4C4;
+  font-family: "Maven Pro", Arial, sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
   margin-bottom: 30px; }
   form .form-left .form-control::placeholder, form .form-right .form-control::placeholder {
     color: #fff;
-    font-family: "Orbitron", Arial, sans-serif;
+    font-family: "Maven Pro", Arial, sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 14px; }
@@ -7385,7 +7370,7 @@ form .form-left .form-control, form .form-right .form-control {
     box-shadow: 0 0 0 0.2rem #12CA04; }
   form .form-left .form-control option, form .form-right .form-control option {
     color: #000;
-    font-family: "Orbitron", Arial, sans-serif;
+    font-family: "Maven Pro", Arial, sans-serif;
     font-weight: 400;
     font-size: 14px;
     line-height: 14px; }
