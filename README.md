@@ -2,7 +2,7 @@
 - This is my official portfolio site.
 - Website name: DL-Portfolio
 
-Published: https://fungible123.github.io/DL-Portfolio/ or https://donny-layug.netlify.com
+Published: https://fungible123.github.io/DL-Portfolio/ or https://dl-portfolio.netlify.com
 
 ### Design
 
